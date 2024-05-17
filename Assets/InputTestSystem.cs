@@ -12,7 +12,7 @@ using UnityEngine;
         protected override void OnUpdate()
         {
             var inputBuffer =  SystemAPI.GetSingletonBuffer<InputBufferData<MyCapsulesCustomInputs>>();
-            Debug.LogWarning(inputBuffer.Length);
+            Debug.Log("Buffer size: " + inputBuffer.Length);
             foreach (var inputs in SystemAPI.Query<RefRW<MyCapsulesCustomInputs>>())
             {
                 int horizontalInput = 5;
